@@ -5,19 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PDF Links Page</title>
   <style>
+    /* Apply base styles and the animated background to the body */
     body {
       font-family: Arial, sans-serif;
-      background-color: #282828;
       margin: 0;
+      /* Background styles applied here */
+      background: linear-gradient(-45deg, #078f81, #076f8f, #07508f, #07208f);
+      background-size: 400% 400%; /* Make the background larger than the container to allow for movement */
+      animation: gradientAnimation 15s ease infinite; /* Apply the animation */
+      width: 100vw; /* Full viewport width */
+      height: 100vh; /* Full viewport height */
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%; /* Start position of the gradient */
+        }
+        50% {
+            background-position: 100% 50%; /* Middle position */
+        }
+        100% {
+            background-position: 0% 50%; /* End position, looping back to start */
+        }
     }
 
     .container {
       display: flex;
-      color: yellow;
+      color: rgba(255, 255, 255, 0.8);
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 100vh; /* Ensure container covers the whole body height */
       text-align: center;
       padding: 20px;
       box-sizing: border-box;
@@ -25,16 +43,21 @@
 
     h1 {
       margin-bottom: 30px;
+      font-size: 3.8rem;
+    }
+
+    h2 {
+      margin-bottom: 30px;
       font-size: 1.8rem;
     }
 
     .button {
-      background-color: #303030;
+      background-color: rgba(48, 48, 48, 0.5);
       font-weight: bold;
-      color: yellow;
+      color: rgba(255, 255, 255, 0.8);
       padding: 12px 24px;
       margin: 10px;
-      border: 2px solid black;
+      border: 0px solid black;
       border-radius: 8px;
       cursor: pointer;
       font-size: 1rem;
@@ -49,12 +72,12 @@
     }
 
     .diff_button {
-      background-color: #161616;
+      background-color: rgba(48, 48, 48, 0.8);
       font-weight: bold;
-      color: yellow;
+      color: rgba(255, 255, 255, 0.8);
       padding: 12px 24px;
       margin: 10px;
-      border: 2px solid black;
+      border: 0px solid black;
       border-radius: 8px;
       cursor: pointer;
       font-size: 1rem;
@@ -83,11 +106,15 @@
 </head>
 <body>
   <div class="container">
-    <h1>Sites</h1>
+    <h1>Sam Ross</h1>
+    <h2>Sites</h2>
 
     <button class=button onclick="window.location.href='https://samtross10.github.io/3dPrintingLab/'">3D Printing Lab</button>
+
+    <!-- Example of how to use the 'diff_button' class -->
+    <button class="diff_button" onclick="window.location.href='#'">Button</button>
     
-    <p style="font-size: 12px; color: white;">Last Updated: 11/3/2025</p>
+    <p style="font-size: 12px; color: white;">Last Updated: 11/7/2025</p>
   </div>
 </body>
 </html>
