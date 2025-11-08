@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Ross - Contact</title>
+  <style>
+    :root {
+      --accent: rgb(53, 33, 183);
+      --bg-dark: #111;
+      --bg-light: #ffeedd;
+      --text: rgba(211, 211, 211, 0.75);
+      --muted: #d3d3d3;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #2173b7, #21b2b7, #21b778, #3521b7);
+      background-size: 400% 400%;
+      color: var(--text);
+      overflow-x: hidden;
+      animation: gradientMove 12s ease infinite;
+      min-height: 100vh;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      background: rgba(17,17,17,0.5);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 100;
+    }
+    header .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
+    header nav { display: flex; align-items: center; }
+    header nav a { margin: 0 1rem; text-decoration: none; color: var(--text); opacity: 0.85; transition: 0.2s; }
+    header nav a:hover { color: var(--accent); opacity: 1; }
+
+    section { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 2rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 1rem; }
+    p { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; }
+
+    .contact-buttons { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+    .contact-buttons a { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: transparent; border: 2px solid var(--accent); border-radius: 50%; color: var(--accent); text-decoration: none; transition: 0.3s; position: relative; }
+    .contact-buttons a svg { width: 28px; height: 28px; stroke: var(--accent); z-index: 2; transition: 0.3s; }
+    .contact-buttons a span { display: none; }
+    .contact-buttons a:hover { background: var(--accent); color: var(--bg-dark); transform: scale(1.15); transform: translateY(-5px);}
+    .contact-buttons a:hover svg { stroke: var(--bg-dark); transform: scale(1.15);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Sam Ross</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Contact Me</h1>
+    <p>Reach out through any of the following platforms:</p>
+    <div class="contact-buttons">
+      <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://www.instagram.com/samtross984/" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      </a>
+      <a href="https://github.com/samtross10" target="_blank" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 3v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 18 4.77 5.07 5.07 0 0 0 17.91 1S16.73.65 14 2.48a13.38 13.38 0 0 0-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.76c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V21"/></svg>
+      </a>
+      <a href="mailto:sam.t.ross10@gmail.com" target="_blank" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </section>
+</body>
+</html>

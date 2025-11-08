@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Ross - Projects</title>
+  <style>
+    :root {
+      --accent: rgb(53, 33, 183);
+      --trans_accent: rgba(53, 33, 183, 0.3);
+      --read_button: rgb(160, 156, 186);
+      --bg-dark: #111;
+      --text: rgba(211, 211, 211, 0.75);
+      --muted: #d3d3d3;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #2173b7, #21b2b7, #21b778, #3521b7);
+      background-size: 400% 400%;
+      color: var(--text);
+      overflow-x: hidden;
+      animation: gradientMove 12s ease infinite;
+      min-height: 100vh;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      background: rgba(17,17,17,0.5);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      z-index: 100;
+    }
+    header .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
+    header nav { display: flex; align-items: center; }
+    header nav a { margin: 0 1rem; text-decoration: none; color: var(--text); opacity: 0.85; transition: 0.2s; }
+    header nav a:hover { color: var(--accent); opacity: 1; }
+
+    section { width: 100%; max-width: 1200px; margin: 0 auto; padding: 10rem 2rem 2rem 2rem; }
+
+    h1 { text-align: center; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; margin-bottom: 2rem; }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .project-card { background: rgba(0,0,0,0.5); border: 0px solid var(--accent); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; align-items: center; transition: 0.3s; }
+    .project-card h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .project-card p { text-align: center; color: var(--muted); font-size: 1rem; margin-bottom: 1.5rem; }
+    .project-card a.button { display: inline-block; padding: 0.5rem 1rem; border-radius: 5px; background: var(--accent); color: var(--bg-dark); text-decoration: none; transition: 0.3s; }
+    .project-card a.read_button { display: inline-block; padding: 0.5rem 1rem; border-radius: 5px; background: var(--read_button); color: var(--bg-dark); text-decoration: none; transition: 0.3s; }
+    .project-card a.button:hover { background: rgba(53,33,183,0.8); transform: scale(1.05); }
+    .project-card a.read_button:hover { background: rgba(160, 156, 186, 0.8); transform: scale(1.05); }
+
+    .button-container {
+      display: flex;
+      gap: 10px; /* space between buttons */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Sam Ross</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>My Projects</h1>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h2>3D Printing Lab Website</h2>
+        <p>Helped set up a 3D printing lab at my school and built the website for it.</p>
+        <div class="button-container">
+          <a href="https://samtross.com/3dPrintingLab" target="_blank" class="button">View Site</a>
+          <a href="3dprintinglab.html" target="_blank" class="read_button">Read More</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h2>Project 1</h2>
+        <p>Description of Project 1.</p>
+      </div>
+      <div class="project-card">
+        <h2>Project 2</h2>
+        <p>Description of Project 2.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
